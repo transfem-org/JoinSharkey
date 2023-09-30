@@ -96,6 +96,7 @@
                     })
                     .then(data => {
                             console.log(data["instancesInfos"]);
+                            data["instancesInfos"].sort((a, b) => b.stats.originalUsersCount - a.stats.originalUsersCount);
                             data["instancesInfos"].forEach(item => {
                             const itemElement = document.createElement("div");
                             itemElement.innerHTML = `<main>
