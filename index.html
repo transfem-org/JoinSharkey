@@ -16,72 +16,76 @@
 -->
 <!DOCTYPE html>
 <html>
-    <head>
-     <!-- site title and encoding -->
-     <title>Sharkey</title>
-      <meta charset="utf-8">
-      <!-- favicon and opengraph -->
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-            <meta name="viewport" content="width=device-width">
-            <meta property="og:title" content="Sharkey">
-            <meta name="og:description" content="Sharkey is an Misskey fork following upstream changes when possible, with added features!">
-            <meta property="og:type" content="website">
-            <meta property="og:url" content="https://joinsharkey.org/" />
-            <meta property="og:image" content="https://joinsharkey.org/assets/sharkey.png" />
-        <!-- stylesheet, google fonts and font awesome -->
-        <link rel="stylesheet" href="stylesheets/transrights.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@800&display=swap" rel="stylesheet">
-     <script src="https://kit.fontawesome.com/e02d9b5ee8.js" crossorigin="anonymous"></script>
-    </head>
+<head>
+    <!-- site title and encoding -->
+    <title>Sharkey</title>
+    <meta charset="utf-8">
+    <!-- favicon and opengraph -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content="Sharkey">
+    <meta name="og:description" content="Sharkey is an Misskey fork following upstream changes when possible, with added features!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joinsharkey.org/" />
+    <meta property="og:image" content="https://joinsharkey.org/assets/sharkey.png" />
+    <meta property="theme-color" content="#7f02d9" />
+    <!-- stylesheet, google fonts and font awesome -->
+    <link rel="stylesheet" href="stylesheets/transrights.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e02d9b5ee8.js" crossorigin="anonymous"></script>
+</head>
 
 <body>
-   <!-- header and navigation -->
+    <!-- header and navigation -->
     <header>
         <img src="assets/sharkey.svg" height="28px">
-        <div id="nav"><a href="#findaninstance">find an instance</a> | 
-            <a href="https://github.com/transfem-org/Sharkey">contribute on github</a></div>    
+        <div id="nav"><a href="#findaninstance">find an instance</a> |
+            <a href="https://github.com/transfem-org/Sharkey">contribute on github</a>
+        </div>
     </header>
 
-    
-   <!-- hero with collasping features list -->
+
+    <!-- hero with collasping features list -->
     <div class="hero">
         <main>
-        <h2>Sharkey is an Misskey fork following upstream changes when possible, with added features!</h2>
-        <img src="assets/hero.png" height="342px"  align="right">
-    </main>
+            <h2>Sharkey is an Misskey fork following upstream changes when possible, with added features!</h2>
+            <img src="assets/hero.png" height="342px" align="right">
+        </main>
 
-    <main id="features">
-        <h3>Features:</h3>
-        <ul>
-            <li>ActivityPub support <i class="fa-solid fa-globe"></i></li>
-            <p> Not on <i>Sharkey</i>? No problem! Not only can <i>Sharkey</i> instances talk to each other, but 
-                you can make friends with people on other networks like Mastodon and Pixelfed!</p>
-            <li>Reactions <i class="fa-solid fa-square-plus"></i></li>
-            <p> You can add emoji reactions to any post! No longer are you bound by a like button, 
-                show everyone exactly how you feel with the tap of a button.</p>
-            <li>Federated Post Editing <i class="fa-solid fa-square-pen"></i></li>
-            <p> In <i>Sharkey</i> you can edit your post and it will federate, this is not possible in normal Misskey.</p>
-            <li>Mastodon API <i class="fa-brands fa-mastodon"></i></li>
-            <p> <i>Sharkey</i> implements the Mastodon API unlike normal Misskey.</p>
-        </ul>
-        <a href="https://github.com/transfem-org/Sharkey">Learn more</a>
-     </main>
+        <main id="features">
+            <h3>Features:</h3>
+            <ul>
+                <li>ActivityPub support <i class="fa-solid fa-globe"></i></li>
+                <p> Not on <i>Sharkey</i>? No problem! Not only can <i>Sharkey</i> instances talk to each other, but
+                    you can make friends with people on other networks like Mastodon and Pixelfed!</p>
+                <li>Reactions <i class="fa-solid fa-square-plus"></i></li>
+                <p> You can add emoji reactions to any post! No longer are you bound by a like button,
+                    show everyone exactly how you feel with the tap of a button.</p>
+                <li>Federated Post Editing <i class="fa-solid fa-square-pen"></i></li>
+                <p> In <i>Sharkey</i> you can edit your post and it will federate, this is not possible in normal Misskey.</p>
+                <li>Mastodon API <i class="fa-brands fa-mastodon"></i></li>
+                <p> <i>Sharkey</i> implements the Mastodon API unlike normal Misskey.</p>
+            </ul>
+            <a href="https://github.com/transfem-org/Sharkey">Learn more</a>
+        </main>
     </div><br>
 
-   <!-- informational blurb with sharkey logo -->
+    <!-- informational blurb with sharkey logo -->
     <main>
-     <img src="assets/sharkey.png" height="220px" align="right">
-     <h3>Sharkey is an upstream fork of Misskey that promises to deliver an improved feature set and UX across the board, 
-        with an emphasis on providing improved performance over other Misskey derivatives, our mission is to cohesive experience taking note of our communities feedback to better our software.</h3>
-     <hr>
-    <p>Like any other ActivityPub software <i>Sharkey</i> can interface with the thousands of servers that form the fediverse, an interconnected social network, working in tandem with software such as Akkoma, Mastodon, Pixelfed and many more!</p>
-    
-    <a id="findaninstance"><h3>&nbsp;Find an instance</h3></a>
-        <div id="instances">       
+        <img src="assets/sharkey.png" height="220px" align="right">
+        <h3>Sharkey is an upstream fork of Misskey that promises to deliver an improved feature set and UX across the board,
+            with an emphasis on providing improved performance over other Misskey derivatives, our mission is to cohesive experience taking note of our communities feedback to better our software.</h3>
+        <hr>
+        <p>Like any other ActivityPub software <i>Sharkey</i> can interface with the thousands of servers that form the fediverse, an interconnected social network, working in tandem with software such as Akkoma, Mastodon, Pixelfed and many more!</p>
+
+        <a id="findaninstance">
+            <h3>&nbsp;Find an instance</h3>
+        </a>
+        <div id="instances">
         </div>
         <script>
             document.addEventListener("DOMContentLoaded", () => {
@@ -95,17 +99,17 @@
                         return response.json();
                     })
                     .then(data => {
-                            console.log(data["instancesInfos"]);
-                            data["instancesInfos"].sort((a, b) => {
-                              if (a.meta.uri === "https://transfem.social") {
-                                 return -1;
-                              } else if (b.meta.uri === "https://transfem.social") {
-                                     return 1;
-                              } else {
-                                  return b.stats.originalUsersCount - a.stats.originalUsersCount;
-                              }
-                            }); 
-                            data["instancesInfos"].forEach(item => {
+                        console.log(data["instancesInfos"]);
+                        data["instancesInfos"].sort((a, b) => {
+                            if (a.meta.uri === "https://transfem.social") {
+                                return -1;
+                            } else if (b.meta.uri === "https://transfem.social") {
+                                return 1;
+                            } else {
+                                return b.stats.originalUsersCount - a.stats.originalUsersCount;
+                            }
+                        });
+                        data["instancesInfos"].forEach(item => {
                             const itemElement = document.createElement("div");
                             itemElement.innerHTML = `<main>
                             <a href="${item.meta.uri}"><header style="background-image: url('${item.meta.backgroundImageUrl}')">
@@ -124,53 +128,55 @@
                     });
             });
         </script>
-</main><br>
+    </main><br>
 
-   <!-- maintainers list flexbox-->
+    <!-- maintainers list flexbox-->
     <main>
-     <h3>Maintainers</h3>
+        <h3>Maintainers</h3>
 
-    <div id="team"><main>
-        <img src="maintainers/amelia.webp">
-        <p><b>Amelia</b> | Project Lead / Developer</p>
-        <a href="https://transfem.social/@Amelia"><i class="fa-solid fa-user-plus"></i>&nbsp;@Amelia@transfem.social</a><br>
-        <a href="https://github.com/Insert5StarName"><i class="fa-brands fa-github"></i>&nbsp;@Insert5StarName</a><br>
-        <a href="https://github.com/transfem-org/Sharkey/commits?author=Insert5StarName"><i class="fa-solid fa-code-commit"></i>&nbsp;commit history</a>   
-        <br><sup>she/her</sup>
-    </main>
-    
-    <main>
-        <img src="maintainers/marie.webp">
-        <p><b>Marie</b> | Developer</p>
-        <a href="https://transfem.social/@marie"><i class="fa-solid fa-user-plus"></i>&nbsp;@Marie@transfem.social</a><br>
-        <a href="https://github.com/Mar0xy"><i class="fa-brands fa-github"></i>&nbsp;@Mar0xy</a><br>
-        <a href="https://github.com/transfem-org/Sharkey/commits?author=Mar0xy"><i class="fa-solid fa-code-commit"></i>&nbsp;commit history</a>   
-        <br><sup>she/her</sup>
-    </main>
+        <div id="team">
+            <main>
+                <img src="maintainers/amelia.webp">
+                <p><b>Amelia</b> | Project Lead / Developer</p>
+                <a href="https://transfem.social/@Amelia"><i class="fa-solid fa-user-plus"></i>&nbsp;@Amelia@transfem.social</a><br>
+                <a href="https://github.com/Insert5StarName"><i class="fa-brands fa-github"></i>&nbsp;@Insert5StarName</a><br>
+                <a href="https://github.com/transfem-org/Sharkey/commits?author=Insert5StarName"><i class="fa-solid fa-code-commit"></i>&nbsp;commit history</a>
+                <br><sup>she/her</sup>
+            </main>
 
-    <main>
-        <img src="maintainers/kaity.png">
-        <p><b>Kaity A</b> | Developer</p>
-        <a href="https://blahaj.zone/@supakaity"><i class="fa-solid fa-user-plus"></i>&nbsp;@supakaity@blahaj.zone</a><br>
-        <a href="https://github.com/supakaity"><i class="fa-brands fa-github"></i>&nbsp;@supakaity</a><br>
-        <a href="https://github.com/transfem-org/Sharkey/commits?author=supakaity"><i class="fa-solid fa-code-commit"></i>&nbsp;commit history</a>   
-        <br><sup>she/her</sup>
-    </main>
+            <main>
+                <img src="maintainers/marie.webp">
+                <p><b>Marie</b> | Developer</p>
+                <a href="https://transfem.social/@marie"><i class="fa-solid fa-user-plus"></i>&nbsp;@Marie@transfem.social</a><br>
+                <a href="https://github.com/Mar0xy"><i class="fa-brands fa-github"></i>&nbsp;@Mar0xy</a><br>
+                <a href="https://github.com/transfem-org/Sharkey/commits?author=Mar0xy"><i class="fa-solid fa-code-commit"></i>&nbsp;commit history</a>
+                <br><sup>she/her</sup>
+            </main>
 
-    <main>
-        <img src="maintainers/kitty.webp">
-        <p><b>Kitty</b> | Frontend Developer</p>
-        <a href="https://ambrosia.moe/@digikitty_x86"><i class="fa-solid fa-user-plus"></i>&nbsp;@digikitty_x86@ambrosia.moe</a><br>
-        <a href="https://github.com/digikitty-x86"><i class="fa-brands fa-github"></i>&nbsp;@digikitty-x86</a><br>
-        <a href="https://github.com/transfem-org/JoinSharkey"><i class="fa-solid fa-code-commit"></i>&nbsp;joinsharkey repo</a>   
-        <br><sup>it/its</sup>
-    </main></div><br>
-</main><br>
+            <main>
+                <img src="maintainers/kaity.png">
+                <p><b>Kaity A</b> | Developer</p>
+                <a href="https://blahaj.zone/@supakaity"><i class="fa-solid fa-user-plus"></i>&nbsp;@supakaity@blahaj.zone</a><br>
+                <a href="https://github.com/supakaity"><i class="fa-brands fa-github"></i>&nbsp;@supakaity</a><br>
+                <a href="https://github.com/transfem-org/Sharkey/commits?author=supakaity"><i class="fa-solid fa-code-commit"></i>&nbsp;commit history</a>
+                <br><sup>she/her</sup>
+            </main>
 
-<!-- site footer and copyright information -->
-<footer>
-    <span><b>&copy; 2023 TransFem.Social & JoinSharkey.org,</b> all rights reserved</span>
-    <a href="https://discord.gg/6VgKmEqHNk">transfem.org discord server</a>
-</footer>
+            <main>
+                <img src="maintainers/kitty.webp">
+                <p><b>Kitty</b> | Frontend Developer</p>
+                <a href="https://ambrosia.moe/@digikitty_x86"><i class="fa-solid fa-user-plus"></i>&nbsp;@digikitty_x86@ambrosia.moe</a><br>
+                <a href="https://github.com/digikitty-x86"><i class="fa-brands fa-github"></i>&nbsp;@digikitty-x86</a><br>
+                <a href="https://github.com/transfem-org/JoinSharkey"><i class="fa-solid fa-code-commit"></i>&nbsp;joinsharkey repo</a>
+                <br><sup>it/its</sup>
+            </main>
+        </div><br>
+    </main><br>
+
+    <!-- site footer and copyright information -->
+    <footer>
+        <span><b>&copy; 2023 TransFem.Social & JoinSharkey.org,</b> all rights reserved</span>
+        <a href="https://discord.gg/6VgKmEqHNk">transfem.org discord server</a>
+    </footer>
 </body>
 </html>
