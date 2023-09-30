@@ -152,8 +152,9 @@ h2,h3, b {
     background-color: rgba(25,25,33,255);
     box-shadow: 5px 5px 5px rgba(24, 19, 31, 0.319);
     transition: all 0.25s ease-in-out; 
+    min-height: 275px;
     padding: 0px;
-    margin: 7px;
+    margin: 8px;
 }
 
 #instances main:hover {
