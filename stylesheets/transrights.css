@@ -142,24 +142,18 @@ h2,h3, b {
 
 #instances {
     margin: 0 auto;
-    flex-direction: row;
-    gap: 10px;
-    display: flex;
-    width: 85%;
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(auto-fit, 500px);
+    width: 88%;
 }
-
-@media (max-width: 1250px) {
-    #instances {
-      flex-direction: column;
-    }
-  }
 
 #instances main {
     background-color: rgba(25,25,33,255);
     box-shadow: 5px 5px 5px rgba(24, 19, 31, 0.319);
     transition: all 0.25s ease-in-out; 
-    padding-bottom: 5px;
     padding: 0px;
+    margin: 7px;
 }
 
 #instances main:hover {
@@ -173,6 +167,14 @@ h2,h3, b {
 #info {
     padding: 15px;
 }
+
+@media (max-width: 1240px) {
+    #instances {
+      grid-template-columns: auto;
+      margin-left: 11px;
+      width: 100%;
+    }
+  }
 
 li {
     list-style-type: square;
