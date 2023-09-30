@@ -26,7 +26,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
             <meta name="viewport" content="width=device-width">
             <meta property="og:title" content="Sharkey">
-            <meta name="og:description" content="Sharkey is an open source, decentralized social media platform that's free forever!">
+            <meta name="og:description" content="Sharkey is an Misskey fork following upstream changes when possible, with added features!">
             <meta property="og:type" content="website">
             <meta property="og:url" content="https://joinsharkey.org/" />
             <meta property="og:image" content="https://joinsharkey.org/assets/sharkey.png" />
@@ -42,14 +42,15 @@
    <!-- header and navigation -->
     <header>
         <img src="assets/sharkey.svg" height="28px">
-        <div id="nav"><a href="">find an instance</a> | 
-            <a href="https://github.com/transfem-org/Sharkey">contribute on github</a></div>
+        <div id="nav"><a href="#findaninstance">find an instance</a> | 
+            <a href="https://github.com/transfem-org/Sharkey">contribute on github</a></div>    
     </header>
 
+    
    <!-- hero with collasping features list -->
     <div class="hero">
         <main>
-        <h2>Sharkey is an Misskey fork following upstream changes when possible, with added Features!</h2>
+        <h2>Sharkey is an Misskey fork following upstream changes when possible, with added features!</h2>
         <img src="assets/hero.png" height="342px"  align="right">
     </main>
 
@@ -57,36 +58,72 @@
         <h3>Features:</h3>
         <ul>
             <li>ActivityPub support <i class="fa-solid fa-globe"></i></li>
-            <p> Not on Sharkey? No problem! Not only can Sharkey instances talk to each other, but 
+            <p> Not on <i>Sharkey</i>? No problem! Not only can <i>Sharkey</i> instances talk to each other, but 
                 you can make friends with people on other networks like Mastodon and Pixelfed!</p>
             <li>Reactions <i class="fa-solid fa-square-plus"></i></li>
             <p> You can add emoji reactions to any post! No longer are you bound by a like button, 
                 show everyone exactly how you feel with the tap of a button.</p>
             <li>Federated Post Editing <i class="fa-solid fa-square-pen"></i></li>
-            <p> In Sharkey you can edit your post and it will federate, this is not possible in normal Misskey.</p>
+            <p> In <i>Sharkey</i> you can edit your post and it will federate, this is not possible in normal Misskey.</p>
             <li>Mastodon API <i class="fa-brands fa-mastodon"></i></li>
-            <p> Sharkey implements the Mastodon API unlike normal Misskey.</p>
+            <p> <i>Sharkey</i> implements the Mastodon API unlike normal Misskey.</p>
         </ul>
-        <a href="#learnmore">Learn more</a>
+        <a href="https://github.com/transfem-org/Sharkey">Learn more</a>
      </main>
     </div><br>
 
    <!-- informational blurb with sharkey logo -->
     <main>
-     <img src="assets/sharkey.png" height="213px" align="right">
-     <h3>Sharkey is an upstream fork of misskey that promises to deliver an improved feature set and UX across the board, 
+     <img src="assets/sharkey.png" height="215px" align="right">
+     <h3>Sharkey is an upstream fork of Misskey that promises to deliver an improved feature set and UX across the board, 
         with an emphasis on providing improved performance over other Misskey derivatives, our mission is to cohesive experience taking note of our communities feedback to better our software.</h3>
      <hr>
-    <p>Like any other ActivityPub software sharkey can interface with the thousands of servers that form the fediverse, an interconnected social network, working in tandem with software such as Akkoma, Mastodon, Pixelfed and many more!</p>
-    </main><br>
+    <p>Like any other ActivityPub software <i>Sharkey</i> can interface with the thousands of servers that form the fediverse, an interconnected social network, working in tandem with software such as Akkoma, Mastodon, Pixelfed and many more!</p>
+    
+    <a id="findaninstance"><h3>&nbsp;Find an instance</h3></a>
+        <div id="instances">       
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const apiUrl = "https://api.joinsharkey.org/instances.json";
+                const apiDataContainer = document.getElementById("instances");
+                fetch(apiUrl)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! Status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                            console.log(data["instancesInfos"]);
+                            data["instancesInfos"].forEach(item => {
+                            const itemElement = document.createElement("div");
+                            itemElement.innerHTML = `<main>
+                            <a href="${item.meta.uri}"><header style="background-image: url('${item.meta.backgroundImageUrl}')">
+                                <img src="${item.meta.iconUrl}" height="75px">
+                                </header></a><div id="info">
+                            <p><a href="${item.meta.uri}"><b>${item.name}</b></a> -  <i>${item.stats.originalUsersCount} overall users</i> </p>
+                            <sub>${item.description}</sub>
+                            <hr>
+                            <sup><a href="${item.meta.tosUrl}">terms of service</a> - <a href="${item.meta.uri}">visit instance</a> | version  ${item.nodeinfo.software.version}</sup></div>`;
+                            apiDataContainer.appendChild(itemElement);
+                        });
+                    })
+                    .catch(error => {
+                        console.error("Fetch error:", error);
+                        apiDataContainer.innerHTML = "An error occurred while fetching the data.";
+                    });
+            });
+        </script><br>
+</main><br>
 
    <!-- maintainers list flexbox-->
     <main>
      <h3>Maintainers</h3>
 
     <div id="team"><main>
-        <img src="https://transfem.social/proxy/avatar.webp?url=https%3A%2F%2Fcdn.transfem.social%2Ffiles%2F9f151358-e9e2-4969-9c06-20c0614d07b4&avatar=1">
-        <p><b>Amelia</b> | Project lead / Developer</p>
+        <img src="maintainers/amelia.webp">
+        <p><b>Amelia</b> | Project Lead / Developer</p>
         <a href="https://transfem.social/@Amelia"><i class="fa-solid fa-user-plus"></i>&nbsp;@Amelia@transfem.social</a><br>
         <a href="https://github.com/Insert5StarName"><i class="fa-brands fa-github"></i>&nbsp;@Insert5StarName</a><br>
         <a href="https://github.com/transfem-org/Sharkey/commits?author=Insert5StarName"><i class="fa-solid fa-code-commit"></i>&nbsp;commit history</a>   
@@ -94,7 +131,7 @@
     </main>
     
     <main>
-        <img src="https://transfem.social/proxy/avatar.webp?url=https%3A%2F%2Fcdn.transfem.social%2Ffiles%2Fefc42a3f-d99c-446c-a78b-bae1f389a6f3.gif&avatar=1">
+        <img src="maintainers/marie.webp">
         <p><b>Marie</b> | Developer</p>
         <a href="https://transfem.social/@marie"><i class="fa-solid fa-user-plus"></i>&nbsp;@Marie@transfem.social</a><br>
         <a href="https://github.com/Mar0xy"><i class="fa-brands fa-github"></i>&nbsp;@Mar0xy</a><br>
@@ -103,7 +140,7 @@
     </main>
 
     <main>
-        <img src="https://avatars.githubusercontent.com/u/107532248?v=4">
+        <img src="maintainers/kaity.png">
         <p><b>Kaity A</b> | Developer</p>
         <a href="https://blahaj.zone/@supakaity"><i class="fa-solid fa-user-plus"></i>&nbsp;@supakaity@blahaj.zone</a><br>
         <a href="https://github.com/supakaity"><i class="fa-brands fa-github"></i>&nbsp;@supakaity</a><br>
@@ -112,7 +149,7 @@
     </main>
 
     <main>
-        <img src="https://cdn.transfem.social/files/20d201bb-f4b1-4839-a759-38dc6e6ae441.webp">
+        <img src="maintainers/kitty.webp">
         <p><b>Kitty</b> | Frontend Developer</p>
         <a href="https://ambrosia.moe/@digikitty_x86"><i class="fa-solid fa-user-plus"></i>&nbsp;@digikitty_x86@ambrosia.moe</a><br>
         <a href="https://github.com/digikitty-x86"><i class="fa-brands fa-github"></i>&nbsp;@digikitty-x86</a><br>
