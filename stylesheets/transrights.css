@@ -172,7 +172,6 @@ h2,h3, b {
 @media (max-width: 1240px) {
     #instances {
       grid-template-columns: auto;
-      margin-left: 11px;
       width: 100%;
     }
   }
