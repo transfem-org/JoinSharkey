@@ -96,7 +96,15 @@
                     })
                     .then(data => {
                             console.log(data["instancesInfos"]);
-                            data["instancesInfos"].sort((a, b) => b.stats.originalUsersCount - a.stats.originalUsersCount);
+                            data["instancesInfos"].sort((a, b) => {
+                              if (a.meta.uri === "https://transfem.social") {
+                                 return -1;
+                              } else if (b.meta.uri === "https://transfem.social") {
+                                     return 1;
+                              } else {
+                                  return b.stats.originalUsersCount - a.stats.originalUsersCount;
+                              }
+                            }); 
                             data["instancesInfos"].forEach(item => {
                             const itemElement = document.createElement("div");
                             itemElement.innerHTML = `<main>
