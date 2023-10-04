@@ -1,0 +1,76 @@
+<!--
+           $$\                           $$\                           
+           $$ |                          $$ |                          
+  $$$$$$$\ $$$$$$$\   $$$$$$\   $$$$$$\  $$ |  $$\  $$$$$$\  $$\   $$\ 
+ $$  _____|$$  __$$\  \____$$\ $$  __$$\ $$ | $$  |$$  __$$\ $$ |  $$ |
+ \$$$$$$\  $$ |  $$ | $$$$$$$ |$$ |  \__|$$$$$$  / $$$$$$$$ |$$ |  $$ |
+  \____$$\ $$ |  $$ |$$  __$$ |$$ |      $$  _$$<  $$   ____|$$ |  $$ |
+ $$$$$$$  |$$ |  $$ |\$$$$$$$ |$$ |      $$ | \$$\ \$$$$$$$\ \$$$$$$$ |
+ \_______/ \__|  \__| \_______|\__|      \__|  \__| \_______| \____$$ |
+                                                             $$\   $$ |
+                                                             \$$$$$$  |
+                                                              \______/ 
+
+ If you're reading this, why don't you pitch in your own expertise and join in the development? 
+ https://github.com/transfem-org/sharkey
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- site title and encoding -->
+    <title>Sharkey</title>
+    <meta charset="utf-8">
+    <!-- favicon and opengraph -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content="Sharkey">
+    <meta name="og:description" content="Sharkey is an Misskey fork following upstream changes when possible, with added features!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joinsharkey.org/" />
+    <meta property="og:image" content="https://joinsharkey.org/assets/sharkey.png" />
+    <meta property="theme-color" content="#7f02d9" />
+    <!-- stylesheet, google fonts and font awesome -->
+    <link rel="stylesheet" href="stylesheets/transrights.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e02d9b5ee8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- header and navigation -->
+    <header>
+        <img src="assets/sharkey.svg" height="28px">
+        <div id="nav"><a href="#findaninstance">find an instance</a> |
+            <a href="https://github.com/transfem-org/Sharkey">contribute on github</a>
+        </div>
+    </header>
+
+    <!-- informational blurb with sharkey logo -->
+    <main>
+        <img src="assets/sharkey.png" height="220px" align="right">
+        <h1>Sharkey ActivityPub Extensions</h1>
+        <hr>
+        <p>These are the extensions for ActivityPub that Sharkey implements, this page uses <a href="https://www.w3.org/TR/json-ld/#dfn-compact-iri">compact IRIs.</a></p>
+        <ul>
+            <li>The <code>ap</code> prefix is used to refer to <code>https://www.w3.org/ns/activitystreams#</code></li>
+            <li>The <code>sharkey</code> prefix is used to refer to <code>https://joinsharkey.org/ns#</code></li>
+        </ul>
+        <hr>
+        <h2 id="backgroundUrl">backgroundUrl</h2>
+        <ul>
+            <li>Compact IRI: <code>sharkey:backgroundUrl</code></li>
+            <li>Canonical IRI: <code>https://joinsharkey.org/ns#backgroundUrl</code></li>
+        </ul>
+        <p>Used on actors to indicate that they have a background image url expressed as <code>string</code> that can be used to give additional customizations to their profiles. If set to undefined or null it will be ignored</p>
+    </main><br>
+
+    <!-- site footer and copyright information -->
+    <footer>
+        <span><b>&copy; 2023 TransFem.Social & JoinSharkey.org,</b> all rights reserved</span>
+        <a href="https://discord.gg/6VgKmEqHNk">transfem.org discord server</a>
+    </footer>
+</body>
+</html>
