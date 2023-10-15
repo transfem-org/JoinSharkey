@@ -140,6 +140,17 @@ h2,h3, b {
     padding: 20px;
 }
 
+#mascot {
+    transform: scaleX(-1);
+    margin: auto auto -20% auto;
+}
+
+@media (max-width: 768px) {
+    #mascot {
+      margin: auto auto -3% auto;
+    }
+}
+
 #instances {
     margin: 0 auto;
     display: grid;
