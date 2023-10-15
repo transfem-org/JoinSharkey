@@ -142,7 +142,7 @@ h2,h3, b {
 
 #mascot {
     transform: scaleX(-1);
-    margin: auto auto -20% auto;
+    margin: 7% auto -20% auto;
 }
 
 @media (max-width: 768px) {
