@@ -5,7 +5,7 @@
 - In case of a permanent shutdown, users will be notified at least one month in advance
 - Hosted on a solution that allows at least 50 users
 - Updates Sharkey on at least the stable channel no later than one month after a release is published
-- Does run in either public mode or approval mode(not yet implemented)
+- Does run in either public mode or approval mode
 - must use Sharkey or a fork that follows upstream
 - Has a description, terms of service, and admin contact info (bonus points for an icon and background!)
 - (At least one) administrator that is 16 years or older
