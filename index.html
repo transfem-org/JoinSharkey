@@ -100,9 +100,9 @@
                     })
                     .then(data => {
                         data["instancesInfos"].sort((a, b) => {
-                            if (a.meta.uri === "https://transfem.social") {
+                            if (a.meta.uri === "https://shonk.social") {
                                 return -1;
-                            } else if (b.meta.uri === "https://transfem.social") {
+                            } else if (b.meta.uri === "https://shonk.social") {
                                 return 1;
                             } else {
                                 return b.stats.originalUsersCount - a.stats.originalUsersCount;
